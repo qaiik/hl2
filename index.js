@@ -83,6 +83,14 @@
         return method
     }
 
+    function detectUniqueVariables(){
+        const w = _ifw();
+        const pn = Object.getOwnPropertyNames(w)
+        w.removeParent();
+        return Object.getOwnPropertyNames(window).filter(name => !pn.includes(name))
+    }
+    
+
 
     window.hl = {
         isNative,
@@ -91,6 +99,7 @@
         useSafe,
         callSafe,
         safeAlert,
-        copyOriginal
+        copyOriginal,
+        detectUniqueVariables
     }
 })();
