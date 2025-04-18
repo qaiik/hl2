@@ -89,7 +89,12 @@
         w.removeParent();
         return Object.getOwnPropertyNames(window).filter(name => !pn.includes(name))
     }
-    
+
+    const time = {
+        speedup() {
+            
+        }
+    }
 
 
     window.hl = {
